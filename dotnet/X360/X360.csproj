@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- netstandard2.0 so old .NET Framework 4.6.1+ tools (jrpc.cs, xrpc.cs,
+       xdrpcplusplus.cs, xdevkit wrappers) can reference this drop-in directly. -->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>X360</AssemblyName>
+    <RootNamespace>X360</RootNamespace>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Description>Unify360 client: xbdm / jrpc / xdrpc / xrpc over a plain socket, no Microsoft xbdm.dll.</Description>
+  </PropertyGroup>
+
+  <!-- macOS writes ._* AppleDouble sidecars on exFAT; keep them out of the build. -->
+  <ItemGroup>
+    <Compile Remove="**/._*.cs" />
+    <None Remove="**/._*" />
+  </ItemGroup>
+
+</Project>

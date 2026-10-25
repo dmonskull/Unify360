@@ -1,0 +1,13 @@
+# macOS / exFAT sidecars
+._*
+.DS_Store
+
+# build output
+**/bin/
+**/obj/
+**/__pycache__/
+*.pyc
+plugin/build/
+
+# local console state (not part of the framework)
+console-backups/

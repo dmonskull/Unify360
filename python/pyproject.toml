@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x360"
+version = "0.1.0"
+description = "one library for every xbox 360 connection method (xbdm, jrpc/jrpc2, xdrpc, xrpc)"
+readme = "../README.md"
+requires-python = ">=3.8"
+license = { text = "GPL-3.0-or-later" }
+authors = [{ name = "DMONSKULL" }]
+
+[project.optional-dependencies]
+# only needed for screenshot untiling; the core has no third party deps
+image = ["numpy", "pillow"]
+
+[tool.setuptools]
+packages = ["x360"]
